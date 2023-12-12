@@ -2,9 +2,9 @@ const particles = [];
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  frameRate(5);
+  frameRate(1);
 
-  const particlesLength = Math.floor(window.innerWidth / 8);
+  const particlesLength = Math.floor(window.innerWidth / 10);
   for (let i = 0; i < particlesLength; i++) {
     particles.push(new Particle());
   }
@@ -27,7 +27,7 @@ class Particle {
   constructor(x, y, color) {
     this.pos = createVector(x || random(width), y || random(height));
     this.size = x / 30 || random(width / 50);
-    this.vel = createVector(random(-3, 3), random(-6, 6));
+    this.vel = createVector(random(-25, 25), random(-25, 25));
     this.color = color;
   }
 
@@ -65,8 +65,8 @@ class Particle {
         particle.pos.y
       );
 
-      if (distance < 120) {
-        const alpha = map(distance, 0, 120, 0, 0.25);
+      if (distance < 130) {
+        const alpha = map(distance, 0, 130, 0, 0.3);
         stroke(`rgba(123, 255, 255, ${alpha})`);
         strokeWeight(2);
         line(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
