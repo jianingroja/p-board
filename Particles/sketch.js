@@ -2,6 +2,7 @@ const particles = [];
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
+  frameRate(5);
 
   const particlesLength = Math.floor(window.innerWidth / 8);
   for (let i = 0; i < particlesLength; i++) {
@@ -26,7 +27,7 @@ class Particle {
   constructor(x, y, color) {
     this.pos = createVector(x || random(width), y || random(height));
     this.size = x / 30 || random(width / 50);
-    this.vel = createVector(random(-3, 3), random(-8, 8));
+    this.vel = createVector(random(-3, 3), random(-6, 6));
     this.color = color;
   }
 
