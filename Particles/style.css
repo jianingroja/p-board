@@ -5,23 +5,13 @@ body {
   box-sizing: border-box;
 }
 
-canvas {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-
+/* dark background before canvas is loaded */
 .container {
   position: fixed;
-  top: 0;
-  left: 0;
+  z-index: -10;
   width: 100vw;
   height: 100vh;
-  background-color: transparent;
-}
-
-.container.silent {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
 }
 
 .my-name {
