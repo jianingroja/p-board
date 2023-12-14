@@ -1,26 +1,41 @@
-const particles = [];
+let particles = [];
+let isSilent = false;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   frameRate(1);
 
-  const particlesLength = Math.floor(window.innerWidth / 10);
+  particlesLength = Math.floor(window.innerWidth / 10);
   for (let i = 0; i < particlesLength; i++) {
     particles.push(new Particle());
+  }
+}
+
+function mouseClicked() {
+  if (isSilent) {
+    setup();
+    isSilent = false;
+    loop();
+  } else {
+    particles = [];
+    isSilent = true;
+    noLoop();
   }
 }
 
 function draw() {
   background(20);
 
-  particles.forEach((particle, index) => {
-    particle.update();
-    particle.born();
-    particle.connect(particles.slice(index));
-  });
+  if (!isSilent) {
+    particles.forEach((particle, index) => {
+      particle.update();
+      particle.born();
+      particle.connect(particles.slice(index));
+    });
 
-  const myParticle = new Particle(mouseX, mouseY, `rgba(123, 255, 255, 0.5)`);
-  myParticle.born();
+    const myParticle = new Particle(mouseX, mouseY, `rgba(123, 255, 255, 0.5)`);
+    myParticle.born();
+  }
 }
 
 class Particle {
