@@ -26,9 +26,10 @@ a {
 
 .list-container {
   padding: 1rem 2rem;
-}
 
-li {
-  color: rgba(161, 49, 0, 0.5);
-  list-style: trad-chinese-informal;
+  & li {
+    margin-bottom: 0.5rem;
+    color: rgba(161, 49, 0, 0.5);
+    list-style: trad-chinese-informal inside;
+  }
 }

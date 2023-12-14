@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  color: rgb(161, 49, 0);
+  text-decoration: underline solid rgba(161, 49, 0, 0.5);
+}
