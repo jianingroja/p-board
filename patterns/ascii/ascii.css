@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+h1 {
+  padding: 0.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgb(20, 20, 20);
+  background-color: rgba(255, 255, 255, 0.7);
+
+  & #ascii-1 {
+    color: navy;
+  }
+
+  & #ascii-2 {
+    color: olivedrab;
+  }
+
+  & #ascii-3 {
+    color: tomato;
+  }
+
+  & #ascii-4 {
+    color: seagreen;
+  }
+}
+
+.type-btn {
+  position: fixed;
+  right: 0;
+  top: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.type-btn:hover {
+  cursor: pointer;
+}
