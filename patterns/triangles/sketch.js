@@ -23,6 +23,10 @@ function setup() {
   saveBtn.mousePressed(saveArt);
 
   noLoop();
+}
+
+function mouseClicked() {
+  clear();
   draw();
 }
 
