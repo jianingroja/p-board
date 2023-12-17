@@ -25,7 +25,17 @@ function setup() {
   noLoop();
 }
 
+function keyPressed() {
+  if (keyCode === 32) {
+    repaint();
+  }
+}
+
 function mouseClicked() {
+  repaint();
+}
+
+function repaint() {
   clear();
   draw();
 }

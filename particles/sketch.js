@@ -12,6 +12,16 @@ function setup() {
 }
 
 function mouseClicked() {
+  toggleSilent();
+}
+
+function keyPressed() {
+  if (key === ' ') {
+    toggleSilent();
+  }
+}
+
+function toggleSilent() {
   if (isSilent) {
     setup();
     isSilent = false;

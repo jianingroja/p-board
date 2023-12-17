@@ -26,6 +26,10 @@ function handleTypeClick() {
 }
 
 function mouseClicked() {
+  repaint();
+}
+
+function repaint() {
   clear();
   draw();
 }
@@ -54,6 +58,10 @@ function draw() {
 function keyTyped() {
   if (key === 's') {
     save('film.jpg');
+  }
+
+  if (key === ' ') {
+    repaint();
   }
 }
 
